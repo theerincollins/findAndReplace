@@ -19,8 +19,8 @@ Output: "Hello universe".
 
 ### Setup Instructions
 
-Download all files
-open find_and_replace.html in browser
+* Download all files
+* open find_and_replace.html in browser
 
 
 
