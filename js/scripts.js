@@ -1,8 +1,9 @@
 var findAndReplace = function(stringToCheck, checkWord, replacementWord) {
+
   var punctuationArray = takePunctuation(stringToCheck)[0];
   stringToCheck = takePunctuation(stringToCheck)[1];
-  debugger;
-  var finalString = stringToCheck.replace(checkWord, replacementWord);
+  var re = new RegExp(checkWord,"ig")
+  var finalString = stringToCheck.replace(re, replacementWord);
   if (punctuationArray !== null) {
     return replacePunctuation(punctuationArray, finalString);
   } else {
@@ -27,3 +28,17 @@ var replacePunctuation = function(punctuationArray, stringToCheck) {
   })
   return stringToCheck;
 }
+
+$(document).ready(function(){
+  $("#string-form").submit(function(event){
+    var inputString = $("input#input-string").val()
+    var findWord = $("input#find-word").val()
+    var replacementWord = $("input#replacement-word").val()
+    var finalString = findAndReplace(inputString, findWord, replacementWord)
+    $("#final-string").text(finalString)
+
+    $("#results").show()
+
+    event.preventDefault();
+  });
+});

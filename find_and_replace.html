@@ -1,1 +1,32 @@
 
+<html>
+  <head>
+    <title>Find and Replace</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="js/jquery-1.11.3.min.js"> </script>
+    <script src="js/scripts.js"> </script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="all container">
+<h1>FIND AND REPLACE</h1>
+      <form id="string-form">
+        <div class="form-group">
+          <input class="form-control" id="input-string" type="text" placeholder="Enter a word or phrase here">
+        </div>
+        <div class="form-group">
+          <input id="find-word" class="form-control" type="text" placeholder="Yet another word or phrase here">
+        </div>
+        <div class="form-group">
+          <input id="replacement-word" class="form-control" type="text" placeholder="One more word or phrase">
+        </div>
+        <button class="btn btn-warning">Bamboozle!</button>
+      </form>
+
+      <div id="results">
+        <p>New and Improved:<br> <span id="final-string"></span></p>
+      </div>
+
+    </div>
+  </body>
+</html>

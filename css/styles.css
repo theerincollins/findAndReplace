@@ -1,1 +1,55 @@
+html {
+  height: 100%;
+}
 
+body {
+  background-image: url("../llamas.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  position: relative;
+  min-height: 100%;
+}
+
+
+.form-control {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  font-size: 35px;
+  height: 75px;
+}
+
+.all {
+  text-align: center;
+}
+
+h1 {
+  font-size: 70px;
+  color: #FFD700;
+}
+
+.btn {
+  font-size: 35px;
+  width: 250px;
+}
+
+#results {
+  /*display: none;*/
+  background-color: rgba(112, 112, 112, 0.8);
+
+}
+
+p {
+  font-size: 35px;
+  color: #663399;
+}
+
+#final-string {
+  color: #009966;
+}

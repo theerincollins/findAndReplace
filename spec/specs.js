@@ -1,10 +1,14 @@
 describe('findAndReplace', function(){
   it("will replace a given word in a given string with another given word", function(){
-    expect(findAndReplace("is that a big dog?", "dog", "cat")).to.equal("is that a big cat?");
+    expect(findAndReplace("is that a big dog dog?", "dog", "cat")).to.equal("is that a big cat cat?");
   });
 
   it("will replace a given word in a given string with another given word and return with punctuation", function(){
     expect(findAndReplace("is that a big dog?", "dog", "cat")).to.equal("is that a big cat?");
+  });
+
+  it("will replace a given word in a given string with another given word no matter the case of letters", function(){
+    expect(findAndReplace("is that a big Dog?", "dog", "cat")).to.equal("is that a big cat?");
   });
 
 });
