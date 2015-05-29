@@ -1,6 +1,10 @@
 describe('findAndReplace', function(){
   it("will replace a given word in a given string with another given word", function(){
-    expect(findAndReplace("is that a big dog?", "big", "small")).to.equal("is that a small dog\n");
+    expect(findAndReplace("is that a big dog?", "dog", "cat")).to.equal("is that a big cat?");
+  });
+
+  it("will replace a given word in a given string with another given word and return with punctuation", function(){
+    expect(findAndReplace("is that a big dog?", "dog", "cat")).to.equal("is that a big cat?");
   });
 
 });
@@ -16,5 +20,11 @@ describe('takePunctuation', function(){
 
   it("will replace the puncuation with new lines", function(){
     expect(takePunctuation("hello! there:", "big", "dog")).to.eql([["!", ":"], "hello\n there\n"])
+  })
+})
+
+describe('replacePunctuation', function(){
+  it('will replace \n with the appropriate punctuation', function() {
+    expect(replacePunctuation([",", "!"], "free\n ice cream\n")).to.equal("free, ice cream!")
   })
 })
